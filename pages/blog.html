@@ -12,7 +12,7 @@
       rel="stylesheet"
     />
     <!-- css -->
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../css/style.css" />
     <title>Portfolio Demo Site</title>
   </head>
   <body>
@@ -26,7 +26,7 @@
           <!-- page logo -->
           <div class="nav-logo-area">
             <a href="https://moin-alam.web.app/Portfolio-Demo-Site-01/">
-              <embed src="../img/main-logo.svg" type="" />
+              <img src="../img/main-logo.svg" type="" />
             </a>
           </div>
 
@@ -441,23 +441,22 @@
           </div>
         </div>
         <div class="pagination-buttons-area">
-          <button onclick="prevPage()">
+          <button>
             <embed src="../img/left-arrow.svg" type="" /> Previous
           </button>
 
           <div class="index-button-area">
-            <button onclick="indexPageMove(${i})" index="${i}">1</button>
-            <button onclick="indexPageMove(${i})" index="${i}">2</button>
-            <button onclick="indexPageMove(${i})" index="${i}">3</button>
-            <button onclick="indexPageMove(${i})" index="${i}">..</button>
-            <button onclick="indexPageMove(${i})" index="${i}">8</button>
-            <button onclick="indexPageMove(${i})" index="${i}">9</button>
-            <button onclick="indexPageMove(${i})" index="${i}">10</button>
+            <button index="${i}">1</button>
+            <button index="${i}">1</button>
+            <button index="${i}">2</button>
+            <button index="${i}">3</button>
+            <button index="${i}">..</button>
+            <button index="${i}">8</button>
+            <button index="${i}">9</button>
+            <button index="${i}">10</button>
           </div>
 
-          <button onclick="nextPage()">
-            Next <embed src="../img/right-arrow.svg" type="" />
-          </button>
+          <button>Next <embed src="../img/right-arrow.svg" type="" /></button>
         </div>
       </section>
       <!-- all blog pagination area end -->

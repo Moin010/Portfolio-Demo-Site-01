@@ -12,7 +12,7 @@
       rel="stylesheet"
     />
     <!-- css -->
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <title>Portfolio Demo Site</title>
   </head>
   <body>
@@ -82,7 +82,7 @@
               <a href="#" class="btn btn-Primary">Get started</a>
             </div>
             <div class="home-hero-button">
-              <a href="#" class="btn btn-Primary">Learn more</a>
+              <a href="#" class="btn btn-secondary">Learn more</a>
             </div>
           </div>
         </div>
@@ -145,33 +145,57 @@
           <p>Our UX design process</p>
         </div>
         <div class="home-workflow-graph">
-          <div class="home-workflow-step">
+          <div class="home-workflow-step-1">
+            <embed
+              class="design-process-arrow"
+              src="img/purple-arrow-01.svg"
+              type=""
+            />
             <embed src="img/UX Audit.svg" type="" />
-            <embed src="img/purple-arrow-01.svg" type="" />
           </div>
-          <div class="home-workflow-step">
+          <div class="home-workflow-step-2">
+            <embed
+              class="design-process-arrow"
+              src="img/purple-arrow-02.svg"
+              type=""
+            />
             <embed src="img/Research.svg" type="" />
-            <embed src="img/purple-arrow-02.svg" type="" />
           </div>
-          <div class="home-workflow-step">
+          <div class="home-workflow-step-3">
+            <embed
+              class="design-process-arrow"
+              src="img/purple-arrow-03.svg"
+              type=""
+            />
             <embed src="img/UX Strategy.svg" type="" />
-            <embed src="img/purple-arrow-03.svg" type="" />
           </div>
-          <div class="home-workflow-step">
+          <div class="home-workflow-step-4">
+            <embed
+              class="design-process-arrow"
+              src="img/purple-arrow-04.svg"
+              type=""
+            />
             <embed src="img/visual-design.svg" type="" />
-            <embed src="img/purple-arrow-04.svg" type="" />
           </div>
-          <div class="home-workflow-step">
+          <div class="home-workflow-step-5">
+            <embed
+              class="design-process-arrow"
+              src="img/purple-arrow-05.svg"
+              type=""
+            />
             <embed src="img/usability-Test.svg" type="" />
-            <embed src="img/purple-arrow-05.svg" type="" />
-            <embed src="img/purple-arrow-06.svg" type="" />
+            <embed
+              class="design-process-arrow-last"
+              src="img/purple-arrow-06.svg"
+              type=""
+            />
           </div>
         </div>
       </section>
 
       <!-- Home case study area -->
 
-      <section class="case-study-area">
+      <section class="home-case-study-area">
         <div class="case-study-header">
           <h1>What we make for our clients</h1>
         </div>
@@ -183,85 +207,107 @@
         <div class="case-study-article-area">
           <div class="case-study-card">
             <a href="#">
-              <div class="case-study-pill">
-                <p>Fintech</p>
-              </div>
-              <div class="case-study-logo">
-                <a href="#">
-                  <img src="img/case-study-logo-01.svg" type="" />
-                </a>
-              </div>
-              <div class="case-study-details">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              </div>
-              <div class="case-study-service-type">
-                <p>UX Design</p>
-              </div>
-            </a>
-          </div>
-
-          <div class="case-study-card">
-            <a href="#">
-              <div class="case-study-pill">
-                <p>Beauty & Selfcare</p>
-              </div>
-              <div class="case-study-logo">
-                <a href="#">
-                  <img src="img/case-study-logo-02.svg" type="" />
-                </a>
-              </div>
-              <div class="case-study-details">
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu
-                  commodo maecenas non pretium, a ipsum rhoncus est.
-                </p>
-              </div>
-              <div class="case-study-service-type">
-                <p>Responsive Website</p>
+              <div class="case-study-card-inner-1">
+                <div class="case-study-pill">
+                  <a href="#" class="btn btn-pill btn-Primary">Fintech</a>
+                </div>
+                <div class="case-study-details-with-logo">
+                  <div class="case-study-logo">
+                    <a href="#">
+                      <img src="img/case-study-logo-01.svg" type="" />
+                    </a>
+                  </div>
+                  <div class="case-study-details">
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </p>
+                  </div>
+                  <div class="case-study-service-type">
+                    <p>UX Design</p>
+                  </div>
+                </div>
               </div>
             </a>
           </div>
 
           <div class="case-study-card">
             <a href="#">
-              <div class="case-study-pill">
-                <p>Restaurant</p>
-              </div>
-              <div class="case-study-logo">
-                <a href="#">
-                  <img src="img/case-study-logo-03.svg" type="" />
-                </a>
-              </div>
-              <div class="case-study-details">
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu
-                  commodo maecenas non pretium, a ipsum rhoncus est.
-                </p>
-              </div>
-              <div class="case-study-service-type">
-                <p>Mobile Application</p>
+              <div class="case-study-card-inner-2">
+                <div class="case-study-pill">
+                  <a href="#" class="btn btn-pill btn-Primary"
+                    >Beauty & Selfcare</a
+                  >
+                </div>
+                <div class="case-study-details-with-logo">
+                  <div class="case-study-logo">
+                    <a href="#">
+                      <img src="img/case-study-logo-02.svg" type="" />
+                    </a>
+                  </div>
+                  <div class="case-study-details">
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Arcu commodo maecenas non pretium, a ipsum rhoncus est.
+                    </p>
+                  </div>
+                  <div class="case-study-service-type">
+                    <p>Responsive Website</p>
+                  </div>
+                </div>
               </div>
             </a>
           </div>
 
           <div class="case-study-card">
             <a href="#">
-              <div class="case-study-pill">
-                <p>Medical & Health</p>
+              <div class="case-study-card-inner-3">
+                <div class="case-study-pill">
+                  <a href="#" class="btn btn-pill btn-Primary">Restaurant</a>
+                </div>
+                <div class="case-study-details-with-logo">
+                  <div class="case-study-logo">
+                    <a href="#">
+                      <img src="img/case-study-logo-03.svg" type="" />
+                    </a>
+                  </div>
+                  <div class="case-study-details">
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Arcu commodo maecenas non pretium, a ipsum rhoncus est.
+                    </p>
+                  </div>
+                  <div class="case-study-service-type">
+                    <p>Mobile Application</p>
+                  </div>
+                </div>
               </div>
-              <div class="case-study-logo">
-                <a href="#">
-                  <img src="img/case-study-logo-04.svg" type="" />
-                </a>
-              </div>
-              <div class="case-study-details">
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu
-                  commodo maecenas non pretium, a ipsum rhoncus est.
-                </p>
-              </div>
-              <div class="case-study-service-type">
-                <p>Full Stack</p>
+            </a>
+          </div>
+
+          <div class="case-study-card">
+            <a href="#">
+              <div class="case-study-card-inner-4">
+                <div class="case-study-pill">
+                  <a href="#" class="btn btn-pill btn-Primary"
+                    >Medical & Health</a
+                  >
+                </div>
+                <div class="case-study-details-with-logo">
+                  <div class="case-study-logo">
+                    <a href="#">
+                      <img src="img/case-study-logo-04.svg" type="" />
+                    </a>
+                  </div>
+                  <div class="case-study-details">
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Arcu commodo maecenas non pretium, a ipsum rhoncus est.
+                    </p>
+                  </div>
+                  <div class="case-study-service-type">
+                    <p>Full Stack</p>
+                  </div>
+                </div>
               </div>
             </a>
           </div>
@@ -328,7 +374,9 @@
               type="text"
               placeholder="Email address"
             />
-            <button class="newsletter-button">SUBMIT</button>
+            <button class="newsletter-button btn btn-Tertiary">
+              Subscribe now
+            </button>
           </form>
         </div>
       </section>
@@ -444,9 +492,11 @@
 
       <section class="copyright-footer-area">
         <div class="copyright-text">
-          &copy; Copyright 2022, All Rights Reserved
+          <p>&copy; Copyright 2022, All Rights Reserved</p>
         </div>
       </section>
+
+      <div class="dummy-for-work"></div>
 
       <!-- footer-area-end  -->
     </div>
