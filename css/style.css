@@ -78,12 +78,18 @@ ul li a {
 }
 
 /* global nav area */
-
+.header-offset {
+  height: 120px;
+}
 .main-header-nav-area {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 28px 0px;
+  position: fixed;
+  background-color: var(--white-fff-color);
+  width: 1208px;
+  z-index: 11;
 }
 .main-nav-area ul {
   display: flex;
@@ -451,3 +457,165 @@ ul li a {
 .dummy-for-work {
   height: 100vh;
 }
+
+/* Service page CSS */
+/* Service page CSS */
+/* Service page CSS */
+/* Service page CSS */
+/* Service page CSS */
+/* Service page CSS */
+/* Service page CSS */
+/* Service page CSS */
+/* Service page CSS */
+/* Service page CSS */
+
+/* service page hero area */
+
+.service-hero-area {
+  display: flex;
+  gap: 235px;
+}
+.service-hero-header-with-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  width: 37%;
+}
+.service-hero-header-with-buttons .service-hero-header h1 {
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 64px;
+  letter-spacing: 1px;
+  text-align: left;
+}
+.service-hero-header-with-buttons .service-hero-details p {
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 26px;
+  text-align: left;
+}
+.service-hero-button-area {
+  display: flex;
+  gap: 25px;
+}
+
+/* service page service with image area */
+
+.service-with-images-area {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+.service-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.service-section .service-details {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  width: 34%;
+}
+.service-section .service-details .service-header h3 {
+  font-size: 39.06px;
+  font-weight: 700;
+  line-height: 58.65px;
+  letter-spacing: 1px;
+  text-align: left;
+}
+.service-section .service-details .service-detail p {
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+}
+.service-image {
+  width: 50%;
+}
+.service-image embed {
+  width: 80%;
+}
+
+.service-section:nth-child(even) .service-details {
+  order: 1;
+}
+
+/* solution card area */
+/* solution card area */
+
+.our-solution-area {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  align-items: center;
+}
+.our-solution-area .our-solution-area-header h1 {
+  font-family: Poppins;
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 64px;
+  letter-spacing: 1px;
+  text-align: center;
+}
+.our-solution-area .our-solution-area-details p {
+  font-family: Roboto;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: center;
+}
+.our-solution-card-area {
+  display: flex;
+  justify-content: space-between;
+  gap: 60px;
+  margin: 25px 0px 100px;
+}
+.our-solution-card {
+  padding: 25px;
+  border-radius: 24px;
+  border: 1px solid #2c4bff;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+.our-solution-card .solution-card-name p {
+  font-family: Poppins;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28.8px;
+  letter-spacing: 1px;
+  text-align: left;
+  color: #2843e6;
+}
+.our-solution-card .solution-card-details p {
+  font-family: Roboto;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+  color: #9a9a9a;
+}
+.our-solution-card .solution-card-price {
+  font-family: Poppins;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 38.4px;
+  letter-spacing: 1px;
+  text-align: left;
+  margin-top: 50px;
+}
+
+/* service page end */
+
+/* blog page start */
+/* blog page start */
+/* blog page start */
+/* blog page start */
+/* blog page start */
+/* blog page start */
+/* blog page start */
+/* blog page start */
+/* blog page start */
