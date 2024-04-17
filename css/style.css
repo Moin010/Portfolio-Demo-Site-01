@@ -1118,3 +1118,177 @@ ul li a {
 }
 
 /* all blog pagination area  end*/
+
+/* about us page start */
+
+/* about us page start */
+
+.our-values-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 100px;
+}
+.our-values-area .our-values-header h1 {
+  font-family: var(--second-family);
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 219%;
+  text-align: center;
+}
+.our-values-area .our-value-card-area {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 100px;
+}
+.our-values-area .our-value-card-area .our-value-card {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+.our-values-area .our-value-card-area .our-value-card .our-value-card-header {
+  font-family: var(--second-family);
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 120%;
+}
+.our-values-area .our-value-card-area .our-value-card .our-value-card-details {
+  font-family: var(--second-family);
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 120%;
+}
+.our-values-area
+  .our-value-card-area
+  .our-value-card:nth-child(1)
+  .our-value-card-details {
+  margin-top: -30px;
+}
+.our-values-area
+  .our-value-card-area
+  .our-value-card
+  .our-value-card-img
+  embed {
+  border-radius: 20px;
+}
+.our-members-area {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  align-items: center;
+  margin: 50px 0px;
+}
+
+.our-members-area .our-members-header-area {
+  font-family: var(--second-family);
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 219%;
+  text-align: center;
+}
+.our-members-area .our-member-para-area {
+  font-family: var(--second-family);
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 120%;
+  text-align: center;
+  width: 55%;
+}
+.our-members-area .member-headshot-with-details-area {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 70px;
+  gap: 80px 275px;
+}
+.our-members-area .member-headshot-with-details-area .member-headshot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.our-members-area
+  .member-headshot-with-details-area
+  .member-headshot
+  .member-name {
+  font-family: var(--second-family);
+  font-weight: 600;
+  font-size: 23px;
+  line-height: 153%;
+  text-align: center;
+}
+.our-members-area
+  .member-headshot-with-details-area
+  .member-headshot
+  .member-position {
+  font-family: var(--second-family);
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 173%;
+  text-align: center;
+}
+/* achivement card area start */
+
+.achievement-card-area {
+  background-color: var(--blue-color);
+  border-radius: 24px;
+  padding: 60px;
+  margin-bottom: 80px;
+}
+.achivement-card-heading h1 {
+  font-family: var(--second-family);
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 260%;
+  color: var(--white-fff-color);
+}
+.achivement-counter-with-details-area {
+  display: flex;
+  justify-content: space-around;
+}
+.achivement-counter-with-details-area .achivement-segment {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+}
+.achivement-counter-with-details-area .achivement-segment .achivement-info p {
+  font-family: var(--second-family);
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 297%;
+  color: var(--white-fff-color);
+}
+.achivement-counter-with-details-area
+  .achivement-segment
+  .achivement-details
+  p {
+  font-family: var(--second-family);
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 221%;
+  color: var(--white-fff-color);
+}
+
+.chapter-header-and-button-area {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 120px;
+}
+.chapter-header-and-button-area .chapter-header h3 {
+  width: 90%;
+  font-family: var(--second-family);
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 131%;
+}
+
+.chapter-header-and-button-area {
+  position: relative;
+}
+.chapter-header-and-button-area::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  top: 160%;
+  border: 1px solid #e4e4e7;
+}
