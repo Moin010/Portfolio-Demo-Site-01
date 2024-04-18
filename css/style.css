@@ -1123,6 +1123,10 @@ ul li a {
   background: #f9f5ff;
   color: #7f56d9;
 }
+.index-button-area button.active {
+  background: #f9f5ff;
+  color: #7f56d9;
+}
 
 /* all blog pagination area  end*/
 
