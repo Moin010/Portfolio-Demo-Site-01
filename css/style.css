@@ -37,13 +37,15 @@ ul li {
 ul li a {
   text-decoration: none;
 }
-/* buttons */
-.hamburger-icon {
+.hamburger-icon,
+.cross-icon {
   display: none;
 }
+.cross-icon img,
 .hamburger-icon img {
   width: 40px;
 }
+/* buttons */
 .btn {
   display: inline-block;
   border-radius: 4px;
@@ -1763,6 +1765,9 @@ ul li a {
     margin: 0 auto;
     padding: 0px 25px;
   }
+
+  /* mobile menu start*/
+
   .hamburger-icon {
     display: block;
   }
@@ -1770,10 +1775,57 @@ ul li a {
   .main-nav-button-area {
     display: none;
   }
+  .nav-logo-area {
+    margin-right: 115px;
+  }
+
   .main-header-nav-area {
     max-width: 450px;
     justify-content: flex-start;
   }
+  header {
+    position: relative;
+  }
+
+  .main-header-nav-area.mobile-active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    max-width: 850px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    flex-direction: column;
+  }
+  .main-header-nav-area.mobile-active .nav-logo-area {
+    margin-right: 0px;
+  }
+  .main-header-nav-area.mobile-active .hamburger-icon {
+    display: none;
+  }
+  .main-header-nav-area.mobile-active .cross-icon {
+    display: block;
+    position: absolute;
+    z-index: 20;
+    top: 30px;
+    right: 20px;
+  }
+  .main-header-nav-area.mobile-active .main-nav-area {
+    display: block;
+  }
+  .main-header-nav-area.mobile-active .main-nav-area ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .main-header-nav-area.mobile-active .main-nav-button-area {
+    display: flex;
+  }
+
+  /* mobile menu start*/
+
   .home-hero-area {
     display: grid;
     grid-template-columns: 1fr;
