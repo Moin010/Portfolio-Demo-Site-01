@@ -157,13 +157,13 @@ async function displayIndexButtons() {
       $(".index-button-area").append(`<button >..</button>`);
 
       if (currentIndex < maxIndex - 3) {
-        for (let i = currentIndex - 2; i <= totalTravers - 1; i++) {
+        for (let i = currentIndex - 1; i <= totalTravers - 1; i++) {
           $(".index-button-area").append(
             `<button onclick="indexPageMove(${i})" index="${i}">${i}</button>`
           );
         }
       } else {
-        for (let i = maxIndex - 7; i <= maxIndex - 3; i++) {
+        for (let i = maxIndex - 6; i <= maxIndex - 3; i++) {
           $(".index-button-area").append(
             `<button onclick="indexPageMove(${i})" index="${i}">${i}</button>`
           );

@@ -2021,4 +2021,42 @@ button {
   .index-button-area {
     gap: 3px;
   }
+  /* about us page */
+  /* about us page */
+  /* about us page */
+  .our-values-area .our-value-card-area {
+    flex-direction: column;
+  }
+  .our-values-area .our-value-card-area .our-value-card {
+    width: 100%;
+  }
+  .our-members-area .member-headshot-with-details-area {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .achivement-counter-with-details-area {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .achivement-counter-with-details-area .achivement-segment {
+    width: 100%;
+  }
+  .chapter-header-and-button-area {
+    flex-direction: column;
+    gap: 20px;
+  }
+  /* contact page */
+  /* contact page */
+  /* contact page */
+
+  .contact-page-form
+    .contact-form
+    .contact-form-area
+    .contact-page-contact-form {
+    width: 100%;
+  }
+  .contact-page-contact-form .full-name-area {
+    flex-direction: column;
+  }
 }
