@@ -666,7 +666,12 @@ button {
   gap: 30px;
   margin-top: 70px;
 }
-
+.static-blog-link-arrow,
+.static-blog-cover-image,
+.static-blog-header,
+.static-blog-tag {
+  cursor: pointer;
+}
 .half-screen-static-blog:first-child .static-big-single-blog {
   display: flex;
   flex-direction: column;
@@ -976,6 +981,7 @@ button {
   line-height: 133%;
   display: flex;
   justify-content: space-between;
+  cursor: pointer;
 }
 .all-blog-container .single-dynamic-blog .dynamic-blog-preview-details p {
   font-weight: 400;
