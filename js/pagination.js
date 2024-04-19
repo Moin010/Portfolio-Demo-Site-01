@@ -154,6 +154,7 @@ async function displayIndexButtons() {
 
     if (currentIndex > 3) {
       // $(".index-buttons").append(`<button>..</button>`);
+      $(".index-button-area").append(`<button >..</button>`);
 
       if (currentIndex < maxIndex - 3) {
         for (let i = currentIndex - 2; i <= totalTravers - 1; i++) {
