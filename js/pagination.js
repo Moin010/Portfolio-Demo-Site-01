@@ -1,14 +1,14 @@
-let allDemoProduct;
-async function getProductInfo() {
-  let importedProduct = await fetch("../data/blog-page-blogs.json");
-  allDemoProduct = await importedProduct.json();
-  return allDemoProduct;
+let allDemoBlogs;
+async function getBlogInfo() {
+  let importedBlogs = await fetch("../data/blog-page-blogs.json");
+  allDemoBlogs = await importedBlogs.json();
+  return allDemoBlogs;
 }
 // blog page pagination start
 
 let array = [];
 let arrayLength = 0;
-let activePageDisplaiedProduct = 6; //products per page
+let activePageDisplaiedBlogs = 6; //products per page
 let startIndex = 1;
 let endIndex = 0;
 let currentIndex = 1;
@@ -16,30 +16,30 @@ let maxIndex = 0;
 
 // set and remove active class
 function heilightIndexButton() {
-  startIndex = (currentIndex - 1) * activePageDisplaiedProduct + 1;
-  endIndex = startIndex + activePageDisplaiedProduct - 1;
+  startIndex = (currentIndex - 1) * activePageDisplaiedBlogs + 1;
+  endIndex = startIndex + activePageDisplaiedBlogs - 1;
   if (endIndex > arrayLength) {
     endIndex = arrayLength;
   }
 
   $(".index-button-area button").removeClass("active");
   $(`.index-button-area button[index="${currentIndex}"]`).addClass("active");
-  displayProducts();
+  displayBlogs();
 }
 
-// add products in dom
+// add blogs in dom
 
-function displayProducts() {
+function displayBlogs() {
   $(".all-blog-container .single-dynamic-blog").remove();
-  let firstProduct = startIndex - 1;
-  let lastProduct = endIndex;
+  let firstBlog = startIndex - 1;
+  let lastBlog = endIndex;
 
-  for (let i = firstProduct; i < lastProduct; i++) {
+  for (let i = firstBlog; i < lastBlog; i++) {
     let blogCard = array[i];
 
     // console.log(productCard);
 
-    let injectProduct = `
+    let injectBlogs = `
     
     <div class="single-dynamic-blog">
     <div class="dynamic-blog-cover-image">
@@ -83,21 +83,21 @@ function displayProducts() {
 
     `;
 
-    $(".all-blog-container").append(injectProduct);
+    $(".all-blog-container").append(injectBlogs);
   }
 }
 
 // reseting the variables for the calculations
 
 async function preLoadCalculations() {
-  let allDemoProduct = await getProductInfo();
+  let allDemoBlogs = await getBlogInfo();
 
-  array = allDemoProduct;
+  array = allDemoBlogs;
 
   arrayLength = array.length;
-  maxIndex = arrayLength / activePageDisplaiedProduct;
+  maxIndex = arrayLength / activePageDisplaiedBlogs;
 
-  if (arrayLength % activePageDisplaiedProduct > 0) {
+  if (arrayLength % activePageDisplaiedBlogs > 0) {
     maxIndex++;
   }
   return [array, arrayLength, maxIndex];
@@ -109,7 +109,6 @@ function prevPage() {
     currentIndex--;
     displayIndexButtons();
     heilightIndexButton();
-    // blogPageLoaderDisplay();
   }
 }
 function nextPage() {
@@ -117,14 +116,12 @@ function nextPage() {
     currentIndex++;
     displayIndexButtons();
     heilightIndexButton();
-    // blogPageLoaderDisplay();
   }
 }
 function indexPageMove(index) {
   currentIndex = parseInt(index);
   displayIndexButtons();
   heilightIndexButton();
-  // blogPageLoaderDisplay();
 }
 
 // display pagination buttons
