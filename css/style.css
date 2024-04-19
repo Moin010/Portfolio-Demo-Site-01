@@ -46,6 +46,9 @@ ul li a {
   width: 40px;
 }
 /* buttons */
+button {
+  cursor: pointer;
+}
 .btn {
   display: inline-block;
   border-radius: 4px;

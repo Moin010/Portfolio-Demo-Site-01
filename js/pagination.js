@@ -1,5 +1,4 @@
 let allDemoProduct;
-// all demo product array
 async function getProductInfo() {
   let importedProduct = await fetch("../data/blog-page-blogs.json");
   allDemoProduct = await importedProduct.json();
@@ -23,8 +22,8 @@ function heilightIndexButton() {
     endIndex = arrayLength;
   }
 
-  $(".index-buttons button").removeClass("active");
-  $(`.index-buttons button[index="${currentIndex}"]`).addClass("active");
+  $(".index-button-area button").removeClass("active");
+  $(`.index-button-area button[index="${currentIndex}"]`).addClass("active");
   displayProducts();
 }
 
@@ -36,7 +35,7 @@ function displayProducts() {
   let lastProduct = endIndex;
 
   for (let i = firstProduct; i < lastProduct; i++) {
-    let productCard = array[i];
+    let blogCard = array[i];
 
     // console.log(productCard);
 
@@ -44,20 +43,20 @@ function displayProducts() {
     
     <div class="single-dynamic-blog">
     <div class="dynamic-blog-cover-image">
-      <embed src="../img/blog-img-2.jpg" type="" />
+      <embed src="${blogCard.blogImg}" type="" />
     </div>
     <div class="dynamic-blog-details">
       <div class="dynamic-blog-writer-with-date">
         <div class="dynamic-blog-writer">
-          <p>Demi WIlkinson</p>
+          <p>${blogCard.authorName}</p>
         </div>
         <div class="dynamic-blog-date">
-          <p>• 16 Jan 2022</p>
+          <p>• ${blogCard.publishDate}</p>
         </div>
       </div>
       <div class="dynamic-blog-header-with-arrow">
         <div class="dynamic-blog-header">
-          <h3>PM mental models</h3>
+          <h3>${blogCard.name}</h3>
         </div>
         <div class="dynamic-blog-link-arrow">
           <embed src="../img/blog-link-arrow.svg" type="" />
@@ -65,19 +64,18 @@ function displayProducts() {
       </div>
       <div class="dynamic-blog-preview-details">
         <p>
-          Mental models are simple expressions of complex processes or
-          relationships.
+        ${blogCard.summary}
         </p>
       </div>
       <div class="dynamic-blog-tag-area">
-        <div class="blog-tag product">
-          <p>product</p>
+        <div class="blog-tag ${blogCard.tag1}">
+          <p>${blogCard.tag1}</p>
         </div>
-        <div class="blog-tag research">
-          <p>Research</p>
+        <div class="blog-tag ${blogCard.tag2}">
+          <p>${blogCard.tag2}</p>
         </div>
-        <div class="blog-tag frameworks">
-          <p>Frameworks</p>
+        <div class="blog-tag ${blogCard.tag3}">
+          <p>${blogCard.tag3}</p>
         </div>
       </div>
     </div>
@@ -91,14 +89,13 @@ function displayProducts() {
 
 // reseting the variables for the calculations
 
-async function preLoadCalculations(changedArray) {
+async function preLoadCalculations() {
   let allDemoProduct = await getProductInfo();
 
   array = allDemoProduct;
 
   arrayLength = array.length;
   maxIndex = arrayLength / activePageDisplaiedProduct;
-  // console.log(maxIndex);
 
   if (arrayLength % activePageDisplaiedProduct > 0) {
     maxIndex++;
@@ -112,7 +109,7 @@ function prevPage() {
     currentIndex--;
     displayIndexButtons();
     heilightIndexButton();
-    blogPageLoaderDisplay();
+    // blogPageLoaderDisplay();
   }
 }
 function nextPage() {
@@ -120,14 +117,14 @@ function nextPage() {
     currentIndex++;
     displayIndexButtons();
     heilightIndexButton();
-    blogPageLoaderDisplay();
+    // blogPageLoaderDisplay();
   }
 }
 function indexPageMove(index) {
   currentIndex = parseInt(index);
   displayIndexButtons();
   heilightIndexButton();
-  blogPageLoaderDisplay();
+  // blogPageLoaderDisplay();
 }
 
 // display pagination buttons
@@ -137,12 +134,19 @@ async function displayIndexButtons() {
 
   maxIndex = calculatedVals[2];
 
-  $(".index-buttons button").remove();
-  $(".index-buttons").append(
-    `<button onclick="prevPage()"><img src="img/left-arrow.png" alt="" /></button>`
+  $(".pagination-buttons-area button").remove();
+  $(".index-button-area").remove();
+  $(".pagination-buttons-area").append(
+    ` 
+      <button onclick="prevPage()">
+        <embed src="../img/left-arrow.svg" type="" /> Previous
+      </button>
+      <div class="index-button-area">
+
+    `
   );
 
-  if (maxIndex > 4) {
+  if (maxIndex > 7) {
     let totalTravers = currentIndex + 1;
 
     maxIndex = calculatedVals[2];
@@ -153,43 +157,66 @@ async function displayIndexButtons() {
 
     if (currentIndex > 3) {
       // $(".index-buttons").append(`<button>..</button>`);
-      if (currentIndex < maxIndex) {
-        for (let i = currentIndex - 2; i <= totalTravers; i++) {
-          $(".index-buttons").append(
+
+      if (currentIndex < maxIndex - 3) {
+        for (let i = currentIndex - 2; i <= totalTravers - 1; i++) {
+          $(".index-button-area").append(
+            `<button onclick="indexPageMove(${i})" index="${i}">${i}</button>`
+          );
+        }
+      } else {
+        for (let i = maxIndex - 7; i <= maxIndex - 3; i++) {
+          $(".index-button-area").append(
             `<button onclick="indexPageMove(${i})" index="${i}">${i}</button>`
           );
         }
       }
 
-      if (currentIndex >= maxIndex) {
-        for (let i = currentIndex - 3; i <= totalTravers; i++) {
-          $(".index-buttons").append(
-            `<button onclick="indexPageMove(${i})" index="${i}">${i}</button>`
-          );
-        }
+      if (currentIndex < maxIndex - 3) {
+        $(".index-button-area").append(`<button >..</button>`);
+      }
+
+      for (let i = maxIndex - 2; i <= maxIndex; i++) {
+        $(".index-button-area").append(
+          `<button onclick="indexPageMove(${i})" index="${i}">${i}</button>`
+        );
       }
     } else {
-      totalTravers = 4;
-      for (let i = 1; i <= totalTravers; i++) {
-        $(".index-buttons").append(
+      for (let i = 1; i <= 3; i++) {
+        $(".index-button-area").append(
+          `<button onclick="indexPageMove(${i})" index="${i}">${i}</button>`
+        );
+      }
+      $(".index-button-area").append(`<button >..</button>`);
+      for (let i = maxIndex - 2; i <= maxIndex; i++) {
+        $(".index-button-area").append(
           `<button onclick="indexPageMove(${i})" index="${i}">${i}</button>`
         );
       }
     }
   } else {
     for (let i = 1; i <= maxIndex; i++) {
-      $(".index-buttons").append(
-        `<button onclick="indexPageMove(${i})" index="${i}">${i}</button>`
+      $(".index-button-area").append(
+        `
+         <button onclick="indexPageMove(${i})" index="${i}">${i}</button>
+        `
       );
     }
   }
 
-  $(".index-buttons").append(
-    `<button onclick="nextPage()"><img src="img/right-arrow.png" alt="" /></button>`
+  $(".pagination-buttons-area").append(
+    `
+    </div>
+
+    <button onclick="nextPage()">
+      Next <embed src="../img/right-arrow.svg" type="" />
+    </button>
+
+    `
   );
 
   // scroll to top after pagination
-  scrollTo(0, 250);
+  scrollTo(0, 850);
   heilightIndexButton();
 }
 
